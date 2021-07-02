@@ -3,6 +3,7 @@ import Header from "../header/index";
 import { Container } from "react-bootstrap";
 import { Row, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import "./Style.css"
 
 const Layout = (props) => {
     return (

@@ -14,16 +14,16 @@ window.store = store;
 // This is used to call the api in react 
 
 axios.defaults.baseURL = api;
-axios.defaults.headers.common['Authorization'] = token ? `Bearer ${token}` : '' ;
+axios.defaults.headers.common['Authorization'] = token ? `Bearer ${token}` : '';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 ReactDOM.render(
   <Provider store={store}>
-  <Router>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Router>
+    <Router>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
