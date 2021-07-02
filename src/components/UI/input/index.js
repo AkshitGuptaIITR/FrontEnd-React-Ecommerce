@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form } from "react-bootstrap";
-const input = (props) => {
+const Input = (props) => {
     return (
         // This is the common function that can be  used accross the files
         <Form.Group>
@@ -18,4 +18,4 @@ const input = (props) => {
     )
 }
 
-export default input
+export default Input
