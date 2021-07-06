@@ -23,7 +23,7 @@ const Layout = (props) => {
                                     <li><NavLink to={'/category'}>Category</NavLink></li>
                                 </ul>
                             </Col>
-                            <Col md={{offset:2}}>{props.children}</Col>
+                            <Col md={{ offset: 2 }} style={{ paddingTop: '60px' }}>{props.children}</Col>
                         </Row>
                     </Container>)
                     :

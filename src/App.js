@@ -9,6 +9,7 @@ import { isUserLoggedIn } from './actions/auth';
 import Products from './containers/Products';
 import orders from './containers/orders';
 import category from './containers/category';
+import { getAllCategory } from './actions';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
   useEffect(() => {
     if (!auth.authenticate) {
       dispatch(isUserLoggedIn());
+      dispatch(getAllCategory());
     }
   }, []);
 
