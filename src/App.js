@@ -10,6 +10,7 @@ import Products from './containers/Products';
 import orders from './containers/orders';
 import category from './containers/category';
 import { getAllCategory } from './actions';
+import { getInitialData } from './actions/initialData.action';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
   useEffect(() => {
     if (!auth.authenticate) {
       dispatch(isUserLoggedIn());
-      dispatch(getAllCategory());
+      dispatch(getInitialData());
     }
   }, []);
 

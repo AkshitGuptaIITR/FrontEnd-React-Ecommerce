@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import { Modal, Button, Col, Container, Row } from "react-bootstrap";
+import { Modal, Button, Col, Container, Row, Table } from "react-bootstrap";
 import { useState } from 'react';
 import Input from "../../components/UI/input";
 import { useSelector } from 'react-redux';
@@ -75,8 +75,34 @@ const Products = (props) => {
         ])
     }
 
-    console.log(productPictures);
-
+    const renderProducts = () => {
+        return (
+            <Table responsive="sm">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Description</th>
+                        <th>Product Pictures</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                </tbody>
+            </Table>
+        )
+    }
     return (
         <Layout sidebar>
             <Container>
@@ -86,6 +112,11 @@ const Products = (props) => {
                             <h3>Product</h3>
                             <button onClick={handleShow}>Add</button>
                         </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        {renderProducts()}
                     </Col>
                 </Row>
                 <NewModal
